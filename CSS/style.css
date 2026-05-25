@@ -46,21 +46,14 @@ html {
     height: 100%;
 }
 
-
-body{
-    height: 100%;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 15px;
-    line-height: 1.65;
-    transition: var(--trans);
-    padding-bottom: 60px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.65;
+  transition: var(--trans);
 }
-
 
 /***
    SCROLL REVEAL
