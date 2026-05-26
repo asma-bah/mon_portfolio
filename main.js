@@ -8,7 +8,7 @@ let dark = true;
 function go(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  const offset = 70;
+  const offset = 60;
   const top = el.getBoundingClientRect().top + window.scrollY - offset;
   window.scrollTo({ top, behavior: 'smooth' });
   // Ne ferme plus le menu mobile au clic sur un lien
