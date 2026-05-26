@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asmaou BAH - Portfolio IA & DATA</title>
-  <meta name="description" content="Découvrez le portfolio d'Asmaou BAH, une furture Ingénieuree en Intelligence Artificielle et Data Science. Explorez ses projets, ses compétences techniques et son parcours professionnel dans le domaine de l'IA et de la data.">
+  <meta name="description" content="Découvrez le portfolio d'Asmaou BAH, future ingénieure en Intelligence Artificielle et Data Science. Explorez ses projets, ses compétences techniques et son parcours professionnel dans le domaine de l'IA et de la data.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
 </head>
 <body class="dark">
 
-  <!--- barre de Navigation -->  
-  <nav class="navbar">
+  <!--- barre de Navigation -->
+  <nav class="navbar" id="navbar">
     <span class="logo">AB.</span>
     <button class="menu-bt" id="menu-bt" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -32,14 +32,12 @@
       <span data-fr="Dispo sept. 2026" data-en="Available from Sept. 2026">Dispo sept. 2026</span>
     </div>
 
-    <!-- Contrôles : langue et thème  -->
+    <!-- Contrôles : langue et thème -->
     <div class="nav-right">
-
       <select class="ctrl-select" id="lang-select" onchange="setLang(this.value)">
         <option value="fr">FR</option>
         <option value="en">EN</option>
       </select>
-
       <button class="theme-btn" onclick="toggleTheme()" aria-label="Changer le thème" id="theme-btn">
         <span id="theme-icon">☽</span>
       </button>
@@ -47,38 +45,39 @@
   </nav>
 
   <!--- section Accueil -->
-  <section class="hero reveal visible" id="home">
-    <div class="hero-inner visible">
-      <div class="hero-left visible">
-        <div class="hero-kicker reveal-child visible" data-fr="IA & DATA" data-en="AI & DATA">IA & DATA</div>
-        <div class="hero-name reveal-child visible">
-            Asmaou 
-            <span class="outline">BAH.</span>
+  <section class="hero reveal" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-kicker reveal-child" data-fr="IA & DATA" data-en="AI & DATA">IA & DATA</div>
+        <div class="hero-name reveal-child">
+          Asmaou
+          <span class="outline">BAH.</span>
         </div>
-        <p class ="hero-desc reveal-child visible" data-fr="Furture Ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026" 
-                data-en="Future Engineer in Artificial Intelligence and Data, looking for a work-study program starting September 2026"> Furture Ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026</p>
-
-        <div class="hero-btns reveal-child visible">
+        <p class="hero-desc reveal-child"
+           data-fr="Future ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026"
+           data-en="Future Engineer in Artificial Intelligence and Data, looking for a work-study program starting September 2026">
+          Future ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026
+        </p>
+        <div class="hero-btns reveal-child">
           <a href="CV_Asmaou.pdf" class="btn-a" target="_blank" data-fr="Voir mon CV →" data-en="See my CV →">Voir mon CV →</a>
           <a class="btn-b" onclick="go('cont')" data-fr="Me contacter" data-en="Contact Me">Me contacter</a>
         </div>
         <div class="hero-socials">
           <a href="https://linkedin.com/in/asmaou-bah" target="_blank" class="soc">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
           </a>
-
           <a href="https://github.com/asma-bah" target="_blank" class="soc">
-              <i class="fa-brands fa-github"></i> GitHub
+            <i class="fa-brands fa-github"></i> GitHub
           </a>
         </div>
       </div>
-      <div class="hero-photo reveal-child visible">
+      <div class="hero-photo reveal-child">
         <img src="images/asmaou.jpg" alt="Photo de Asmaou BAH" class="hero-img">
       </div>
     </div>
   </section>
 
-    <!-- section À PROPOS -->
+  <!-- section À PROPOS -->
   <section class="section reveal" id="about">
     <div class="sec-head"><span data-fr="À propos" data-en="About me">À propos</span></div>
     <div class="about-grid">
@@ -127,203 +126,189 @@
   <!--- afficher les compétences en mode ticker -->
   <div class="ticker-wrap">
     <div class="ticker">
-        <span>Python</span><span>Machine Learning</span><span>SQL</span><span>TensorFlow</span><span>PyTorch</span><span>C++</span><span>R</span><span>CNN</span><span>RNN</span><span>Matplotlib</span><span>MCTS</span><span>Behavior Tree</span><span>Machine Learning</span><span>Power BI</span><span>Java</span><span>NumPy</span><span>Pandas</span><span>Pytorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Git</span>
-        <span>Python</span><span>Machine Learning</span><span>SQL</span><span>TensorFlow</span><span>PyTorch</span><span>C++</span><span>R</span><span>CNN</span><span>RNN</span><span>Matplotlib</span><span>MCTS</span><span>Behavior Tree</span><span>Machine Learning</span><span>Power BI</span><span>Java</span><span>NumPy</span><span>Pandas</span><span>Pytorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Git</span>
-      </div>
+      <span>Python</span><span>Machine Learning</span><span>SQL</span><span>TensorFlow</span><span>PyTorch</span><span>C++</span><span>R</span><span>CNN</span><span>RNN</span><span>Matplotlib</span><span>MCTS</span><span>Behavior Tree</span><span>Machine Learning</span><span>Power BI</span><span>Java</span><span>NumPy</span><span>Pandas</span><span>Pytorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Git</span>
+      <span>Python</span><span>Machine Learning</span><span>SQL</span><span>TensorFlow</span><span>PyTorch</span><span>C++</span><span>R</span><span>CNN</span><span>RNN</span><span>Matplotlib</span><span>MCTS</span><span>Behavior Tree</span><span>Machine Learning</span><span>Power BI</span><span>Java</span><span>NumPy</span><span>Pandas</span><span>Pytorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Git</span>
+    </div>
   </div>
 
-
   <!--- Section compétences -->
-  <section class="section reveal visible" id="sk">
+  <section class="section reveal" id="sk">
     <div class="sec-head"><span data-fr="Compétences" data-en="Skills">Compétences</span></div>
-      <div class="sk-rows">
-        <div class="sk-row reveal-child visible">
-          <span class="sk-cat" data-fr="IA & Data" data-en="AI & Data">IA & Data</span>
-          <div class="sk-pills">
-            <span class="sk-p hi">CNN</span><span class="sk-p hi">Scikit-learn</span><span class="sk-p hi">MCTS</span><span class="sk-p hi">Behavior Tree</span>
-            <span class="sk-p">k-NN</span><span class="sk-p" data-fr="Réseaux de neurones" data-en="Neural networks">Réseaux de neurones</span>
-            <span class="sk-p" data-fr="Régression logistique" data-en="Logistic regression">Régression logistique</span>
-            <span class="sk-p hi">Pandas</span><span class="sk-p hi">NumPy</span><span class="sk-p hi">Matplotlib</span>
-
-          </div>
+    <div class="sk-rows">
+      <div class="sk-row reveal-child">
+        <span class="sk-cat" data-fr="IA & Data" data-en="AI & Data">IA & Data</span>
+        <div class="sk-pills">
+          <span class="sk-p hi">CNN</span><span class="sk-p hi">Scikit-learn</span><span class="sk-p hi">MCTS</span><span class="sk-p hi">Behavior Tree</span>
+          <span class="sk-p">k-NN</span>
+          <span class="sk-p" data-fr="Réseaux de neurones" data-en="Neural networks">Réseaux de neurones</span>
+          <span class="sk-p" data-fr="Régression logistique" data-en="Logistic regression">Régression logistique</span>
+          <span class="sk-p hi">Pandas</span><span class="sk-p hi">NumPy</span><span class="sk-p hi">Matplotlib</span>
         </div>
-        <div class="sk-row reveal-child visible">
-          <span class="sk-cat" data-fr="Langage de Programmation et Web" data-en="Programming and Web Languages">Langage de Programmation et Web</span>
-          <div class="sk-pills">
-            <span class="sk-p hi">Python</span><span class="sk-p">R</span>
-            <span class="sk-p hi">C++</span><span class="sk-p hi">Java</span><span class="sk-p">Bash - AWK</span>
-            <span class="sk-p">PHP</span><span class="sk-p">JavaScript</span>
-            <span class="sk-p hi">HTML5</span><span class="sk-p hi">CSS3</span>
-          </div>
+      </div>
+      <div class="sk-row reveal-child">
+        <span class="sk-cat" data-fr="Langages de programmation et Web" data-en="Programming and Web Languages">Langages de programmation et Web</span>
+        <div class="sk-pills">
+          <span class="sk-p hi">Python</span><span class="sk-p">R</span>
+          <span class="sk-p hi">C++</span><span class="sk-p hi">Java</span><span class="sk-p">Bash - AWK</span>
+          <span class="sk-p">PHP</span><span class="sk-p">JavaScript</span>
+          <span class="sk-p hi">HTML5</span><span class="sk-p hi">CSS3</span>
         </div>
-        <div class="sk-row reveal-child visible">
-          <span class="sk-cat" data-fr="Data" data-en="Data">Base de données</span>
-          <div class="sk-pills">
-           <span class="sk-p">SQL</span><span class="sk-p hi">PostgreSQL</span><span class="sk-p">MySQL</span>
-          </div>
+      </div>
+      <div class="sk-row reveal-child">
+        <span class="sk-cat" data-fr="Bases de données" data-en="Databases">Bases de données</span>
+        <div class="sk-pills">
+          <span class="sk-p">SQL</span><span class="sk-p hi">PostgreSQL</span><span class="sk-p">MySQL</span>
         </div>
-        <div class="sk-row reveal-child visible">
-          <span class="sk-cat" data-fr="Outils et Frameworks" data-en="Tools and Frameworks">Outils et Frameworks</span>
-          <div class="sk-pills">
-            <span class="sk-p hi">Git - GitHub</span><span class="sk-p">OpenGL</span>
-            <span class="sk-p">Django</span><span class="sk-p">Angular</span><span class="sk-p">SpringBoot</span> <span class="sk-p hi">PowerBI</span>
-          </div>
+      </div>
+      <div class="sk-row reveal-child">
+        <span class="sk-cat" data-fr="Outils et Frameworks" data-en="Tools and Frameworks">Outils et Frameworks</span>
+        <div class="sk-pills">
+          <span class="sk-p hi">Git - GitHub</span><span class="sk-p">OpenGL</span>
+          <span class="sk-p">Django</span><span class="sk-p">Angular</span><span class="sk-p">SpringBoot</span><span class="sk-p hi">PowerBI</span>
         </div>
-        <div class="sk-row reveal-child visible">
-          <span class="sk-cat" data-fr="Langues" data-en="Languages">Langues</span>
-          <div class="sk-pills">
-            <span class="sk-p hi" data-fr="Poular - Natif" data-en="Pular - Native">Poular - Natif</span>
-            <span class="sk-p hi" data-fr="Français C2" data-en="French C2">Français C2</span>
-            <span class="sk-p" data-fr="Anglais B1" data-en="English B1">Anglais B1</span>
-          </div>
+      </div>
+      <div class="sk-row reveal-child">
+        <span class="sk-cat" data-fr="Langues" data-en="Languages">Langues</span>
+        <div class="sk-pills">
+          <span class="sk-p hi" data-fr="Poular - Natif" data-en="Pular - Native">Poular - Natif</span>
+          <span class="sk-p hi" data-fr="Français C2" data-en="French C2">Français C2</span>
+          <span class="sk-p" data-fr="Anglais B1" data-en="English B1">Anglais B1</span>
         </div>
       </div>
     </div>
   </section>
-   
+
   <!--- Section expérience professionnelle -->
-  <section class="section reveal visible" id="exp">
+  <section class="section reveal" id="exp">
     <div class="sec-head"><span data-fr="Expériences professionnelles" data-en="Professional Experience">Expériences professionnelles</span></div>
     <div class="proj-list">
-      <div class="proj-card reveal-child visible">
+      <div class="proj-card reveal-child">
         <div class="proj-img">
           <img src="images/avion.png" alt="Simulateur d'avion">
         </div>
-
         <div class="proj-body">
           <div class="proj-meta">
-            <span class="proj-num" data-fr="Mars - Mai 2026" data-en="March - May 2026">Mars -  Mai · 2026</span>
-            <span class="proj-badge" data-fr="LERIA, université d'Angers"
-                  data-en="LERIA, University of Angers">LERIA, Université d'Angers</span>
-                  
+            <span class="proj-num" data-fr="Mars - Mai 2026" data-en="March - May 2026">Mars - Mai · 2026</span>
+            <span class="proj-badge" data-fr="LERIA, Université d'Angers" data-en="LERIA, University of Angers">LERIA, Université d'Angers</span>
           </div>
-
-          <h3 data-fr="Stage - Développement d'un simulateur d'avion de guerre" data-en="Internship - Development of a military aircraft simulator">Stage - Développement d'un simulateur d'avion de guerre</h3>
-
-          <p data-fr="Développement d'un simulateur d'avion de guerre en C++ avec rendu 3D en OpenGL, ainsi que la mise en place d'une intelligence artificielle capable
-            d'attaquer et d'éviter un joueur en temps réel, en utilisant des techniques des arbres de comportement pour la prise de décision.
-            " data-en="Development of a military aircraft simulator in C++ with 3D rendering in OpenGL, as well as the implementation of an artificial intelligence capable
-            of attacking and avoiding a player in real-time, using behavior tree techniques for decision-making.
-            ">
-            Développement d'un simulateur d'avion de guerre en C++ avec rendu 3D en OpenGL, ainsi que la mise en place d'une intelligence artificielle capable
-            d'attaquer et d'éviter un joueur en temps réel, en utilisant des techniques des arbres de comportement pour la prise de décision.
-  
+          <h3 data-fr="Stage — Développement d'un simulateur d'avion de guerre" data-en="Internship — Development of a military aircraft simulator">Stage — Développement d'un simulateur d'avion de guerre</h3>
+          <p data-fr="Développement d'un simulateur d'avion de guerre en C++ avec rendu 3D en OpenGL, ainsi que la mise en place d'une intelligence artificielle capable d'attaquer et d'éviter un joueur en temps réel, en utilisant des techniques d'arbres de comportement pour la prise de décision."
+             data-en="Development of a military aircraft simulator in C++ with 3D rendering in OpenGL, as well as the implementation of an artificial intelligence capable of attacking and avoiding a player in real-time, using behavior tree techniques for decision-making.">
+            Développement d'un simulateur d'avion de guerre en C++ avec rendu 3D en OpenGL, ainsi que la mise en place d'une intelligence artificielle capable d'attaquer et d'éviter un joueur en temps réel, en utilisant des techniques d'arbres de comportement pour la prise de décision.
           </p>
-
           <div class="proj-tags">
-            <span data-fr="C++" data-en="C++">C++</span>
-            <span data-fr="OpenGL" data-en="OpenGL">OpenGL</span>
-            <span data-fr="IA" data-en="AI">IA</span>
-            <span data-fr="3D" data-en="3D">3D</span>
+            <span>C++</span>
+            <span>OpenGL</span>
+            <span>IA</span>
+            <span>3D</span>
           </div>
           <a class="proj-gh" href="https://github.com/asma-bah/Baron_Rouge" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
-
         </div>
-
       </div>
+    </div>
   </section>
 
-  <!--Section projet académique et personnel-->
+  <!-- Section projets académiques et personnels -->
   <section class="section reveal" id="pro">
     <div class="sec-head"><span data-fr="Projets académiques" data-en="Academic Projects">Projets académiques</span></div>
-      <div class="proj-list">
+    <div class="proj-list">
 
-        <div class="proj-card reveal-child">
-          <div class="proj-img">
-            <img  src="images/class_images.webp" alt="Classification d'images">
-          </div>
-          <div class="proj-body">
-            <div class="proj-meta"><span class="proj-num">Mars · 2026</span><span class="proj-badge">Python</span></div>
-            <h3 data-fr="Classification d'images" data-en="Image Classification">Classification d'images</h3>
-            <p data-fr="Projet ML individuel multi-classes sur images couleur. Comparaison k-NN, régression logistique, réseaux de neurones et CNN. Évalué sur Codabench."
-              data-en="Individual multi-class ML project on color images. Comparison of k-NN, logistic regression, neural networks and CNN. Evaluated on Codabench.">
-              Projet ML individuel multi-classes sur images couleur. Comparaison k-NN, régression logistique, réseaux de neurones et CNN. Évalué sur Codabench.
-            </p>
-            <div class="proj-tags"><span>Python</span><span>CNN</span><span>Scikit-learn</span><span>ML</span></div>
-            <a class="proj-gh" href="https://github.com/asma-bah/Classification-d-images-en-Couleur-Machine-Learning-" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
-          </div>
+      <div class="proj-card reveal-child">
+        <div class="proj-img">
+          <img src="images/class_images.webp" alt="Classification d'images">
         </div>
-
-        <div class="proj-card flip reveal-child">
-          <div class="proj-img">
-            <img src="images/conway.gif" alt="Conway">
-          </div>
-          <div class="proj-body">
-            <div class="proj-meta"><span class="proj-num">Novembre · 2025</span><span class="proj-badge">C++</span></div>
-            <h3 data-fr="Jeu de la vie — Conway" data-en="Game of Life — Conway">Jeu de la vie — Conway</h3>
-            <p data-fr="Grille bidimensionnelle avec règles de Conway. Architecture orientée objet en C++, rendu graphique SFML."
-              data-en="2D grid with Conway's rules. OOP architecture in C++, SFML graphics.">
-              Grille bidimensionnelle avec règles de Conway. Architecture orientée objet en C++, rendu graphique SFML.
-            </p>
-            <div class="proj-tags"><span>C++</span><span>SFML</span><span>POO</span></div>
-            <a class="proj-gh" href="https://github.com/asma-bah/Jeu_De_La_Vie" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
-          </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num">Mars · 2026</span><span class="proj-badge">Python</span></div>
+          <h3 data-fr="Classification d'images" data-en="Image Classification">Classification d'images</h3>
+          <p data-fr="Projet ML individuel multi-classes sur images couleur. Comparaison k-NN, régression logistique, réseaux de neurones et CNN. Évalué sur Codabench."
+             data-en="Individual multi-class ML project on color images. Comparison of k-NN, logistic regression, neural networks and CNN. Evaluated on Codabench.">
+            Projet ML individuel multi-classes sur images couleur. Comparaison k-NN, régression logistique, réseaux de neurones et CNN. Évalué sur Codabench.
+          </p>
+          <div class="proj-tags"><span>Python</span><span>CNN</span><span>Scikit-learn</span><span>ML</span></div>
+          <a class="proj-gh" href="https://github.com/asma-bah/Classification-d-images-en-Couleur-Machine-Learning-" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
         </div>
-        <div class="proj-card reveal-child">
-          <div class="proj-img">
-            <img src="images/morpion.jpg" alt="Morpion MCTS"> 
-          </div>
-          <div class="proj-body">
-            <div class="proj-meta"><span class="proj-num" data-en="Febriary · 2025">Février · 2025</span><span class="proj-badge">Java</span></div>
-            <h3 data-fr="Morpion avec IA MCTS" data-en="Tic-Tac-Toe — MCTS AI">Morpion avec IA MCTS</h3>
-            <p data-fr="Jeu de morpion en Java avec une IA basée sur Monte Carlo Tree Search (MCTS). L'IA explore les coups par simulation aléatoire et sélectionne le meilleur via la formule UCB1. Interface graphique incluse."
-              data-en="Tic-Tac-Toe in Java with an AI based on Monte Carlo Tree Search (MCTS). The AI explores moves via random simulation and picks the best using the UCB1 formula. Includes a graphical interface.">
-              Jeu de morpion en Java avec une IA basée sur Monte Carlo Tree Search (MCTS). L'IA explore les coups par simulation aléatoire et sélectionne le meilleur via la formule UCB1. Interface graphique incluse.
-            </p>
-            <div class="proj-tags"><span>Java</span><span>MCTS</span><span>IA</span><span>UCB1</span></div>
-            <a class="proj-gh" href="https://github.com/asma-bah/morpion-mcts-java" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
-          </div>
-        </div>
-
-        <div class="proj-card flip reveal-child">
-          <div class="proj-img">
-            <img src="images/diamant.jpeg" alt="Jeu Diamant">          
-          </div>
-          <div class="proj-body">
-            <div class="proj-meta"><span class="proj-num">Mai · 2024</span><span class="proj-badge">Python</span></div>
-            <h3 data-fr="Jeu Diamant" data-en="Diamond Game">Jeu Diamant</h3>
-            <p data-fr="Jeu console inspiré du jeu de société Diamant. IA simulant un joueur, site de présentation en HTML5/CSS3."
-              data-en="Console game inspired by the Diamant board game. AI simulating a player, HTML5/CSS3 website.">
-              Jeu console inspiré du jeu de société Diamant. IA simulant un joueur, site de présentation en HTML5/CSS3.
-            </p>
-            <div class="proj-tags"><span>Python</span><span>IA</span><span>HTML/CSS</span></div>
-            <a class="proj-gh" href="https://github.com/asma-bah" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
-          </div>
-        </div>
-
       </div>
+
+      <div class="proj-card flip reveal-child">
+        <div class="proj-img">
+          <img src="images/conway.gif" alt="Conway">
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num">Novembre · 2025</span><span class="proj-badge">C++</span></div>
+          <h3 data-fr="Jeu de la vie — Conway" data-en="Game of Life — Conway">Jeu de la vie — Conway</h3>
+          <p data-fr="Grille bidimensionnelle avec règles de Conway. Architecture orientée objet en C++, rendu graphique SFML."
+             data-en="2D grid with Conway's rules. OOP architecture in C++, SFML graphics.">
+            Grille bidimensionnelle avec règles de Conway. Architecture orientée objet en C++, rendu graphique SFML.
+          </p>
+          <div class="proj-tags"><span>C++</span><span>SFML</span><span>POO</span></div>
+          <a class="proj-gh" href="https://github.com/asma-bah/Jeu_De_La_Vie" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-child">
+        <div class="proj-img">
+          <img src="images/morpion.jpg" alt="Morpion MCTS">
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num" data-fr="Février · 2025" data-en="February · 2025">Février · 2025</span><span class="proj-badge">Java</span></div>
+          <h3 data-fr="Morpion avec IA MCTS" data-en="Tic-Tac-Toe — MCTS AI">Morpion avec IA MCTS</h3>
+          <p data-fr="Jeu de morpion en Java avec une IA basée sur Monte Carlo Tree Search (MCTS). L'IA explore les coups par simulation aléatoire et sélectionne le meilleur via la formule UCB1. Interface graphique incluse."
+             data-en="Tic-Tac-Toe in Java with an AI based on Monte Carlo Tree Search (MCTS). The AI explores moves via random simulation and picks the best using the UCB1 formula. Includes a graphical interface.">
+            Jeu de morpion en Java avec une IA basée sur Monte Carlo Tree Search (MCTS). L'IA explore les coups par simulation aléatoire et sélectionne le meilleur via la formule UCB1. Interface graphique incluse.
+          </p>
+          <div class="proj-tags"><span>Java</span><span>MCTS</span><span>IA</span><span>UCB1</span></div>
+          <a class="proj-gh" href="https://github.com/asma-bah/morpion-mcts-java" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card flip reveal-child">
+        <div class="proj-img">
+          <img src="images/diamant.jpeg" alt="Jeu Diamant">
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num">Mai · 2024</span><span class="proj-badge">Python</span></div>
+          <h3 data-fr="Jeu Diamant" data-en="Diamond Game">Jeu Diamant</h3>
+          <p data-fr="Jeu console inspiré du jeu de société Diamant. IA simulant un joueur, site de présentation en HTML5/CSS3."
+             data-en="Console game inspired by the Diamant board game. AI simulating a player, HTML5/CSS3 website.">
+            Jeu console inspiré du jeu de société Diamant. IA simulant un joueur, site de présentation en HTML5/CSS3.
+          </p>
+          <div class="proj-tags"><span>Python</span><span>IA</span><span>HTML/CSS</span></div>
+          <a class="proj-gh" href="https://github.com/asma-bah" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- section formation -->
-  <section class="section reveal visible" id="educ">
+  <!-- Section formation -->
+  <section class="section reveal" id="educ">
     <div class="sec-head"><span data-fr="Formations" data-en="Education">Formations</span></div>
-     <div class="educ-item reveal-child visible">
-        <div>
-          <p class="educ-date">2023 — 2026</p>
-          <p class="educ-school" data-fr="Université d'Angers" data-en="University of Angers">Université d'Angers</p>
-        </div>
-        <div>
-          <h3 data-fr="Licence informatique" data-en="Bachelor's in Computer Science">Licence informatique</h3>
-          <p data-fr="Algorithmique, programmation orientée objet, IA, bases de données, développement web, systèmes intélligents, machine learning." data-en="Algorithms, OOP, AI, databases, web development, intelligent systems, machine learning.">
-            Algorithmique, programmation orientée objet, IA, bases de données, développement web, systèmes intélligents, machine learning.</p>
-        </div>
+    <div class="educ-item reveal-child">
+      <div>
+        <p class="educ-date">2023 — 2026</p>
+        <p class="educ-school" data-fr="Université d'Angers" data-en="University of Angers">Université d'Angers</p>
+      </div>
+      <div>
+        <h3 data-fr="Licence informatique" data-en="Bachelor's in Computer Science">Licence informatique</h3>
+        <p data-fr="Algorithmique, programmation orientée objet, IA, bases de données, développement web, systèmes intelligents, machine learning."
+           data-en="Algorithms, OOP, AI, databases, web development, intelligent systems, machine learning.">
+          Algorithmique, programmation orientée objet, IA, bases de données, développement web, systèmes intelligents, machine learning.
+        </p>
       </div>
     </div>
-    <div class="educ-item reveal-child visible">
-        <div>
-          <p class="educ-date">2020 — 2021</p>
-          <p class="educ-school" data-fr="Groupe Scolaire Privé Hadja Hafsatou - Guinée" data-en="Private School Hadja Hafsatou - Guinea">Groupe Scolaire Privé Hadja Hafsatou - Guinée</p>
-        </div>
-        <div>
-          <h3 data-fr="Bacalauréat scientifique Mathématiques" data-en="Scientific Bachelor's in Mathematics">Bacalauréat Science Mathématiques</h3>
-          <p data-fr="Mention : Assez Bien" data-en="Grade: Fairly Good"> Mention : Assez Bien </p>
-        </div>
+    <div class="educ-item reveal-child">
+      <div>
+        <p class="educ-date">2020 — 2021</p>
+        <p class="educ-school" data-fr="Groupe Scolaire Privé Hadja Hafsatou - Guinée" data-en="Private School Hadja Hafsatou - Guinea">Groupe Scolaire Privé Hadja Hafsatou - Guinée</p>
+      </div>
+      <div>
+        <h3 data-fr="Baccalauréat scientifique Mathématiques" data-en="Scientific Bachelor's in Mathematics">Baccalauréat Sciences Mathématiques</h3>
+        <p data-fr="Mention : Assez Bien" data-en="Grade: Fairly Good">Mention : Assez Bien</p>
       </div>
     </div>
   </section>
 
- <!-- section contact -->
+  <!-- Section contact -->
   <section class="section reveal" id="cont">
     <div class="sec-head"><span>Contact</span></div>
     <div class="terminal reveal-child">
@@ -340,11 +325,11 @@
         <div class="term-line"><span class="prompt">~$</span><span class="cmd">cat mobile.txt</span></div>
         <div class="term-out">
           <div class="term-row">
-           <span class="k" data-fr="Mobilité" data-en="Mobility">Mobilité</span><span class="v" data-fr="Pays-de-la-loire, Ile-de-france, Hauts-de-France, Grand-Est" data-en="Pays-de-la-loire, Ile-de-france, Hauts-de-France, Grand-Est">
-              Pays-de-la-loire, Ile-de-france, Hauts-de-France, Grand-Est
+            <span class="k" data-fr="Mobilité" data-en="Mobility">Mobilité</span>
+            <span class="v" data-fr="Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est" data-en="Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est">
+              Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est
             </span>
           </div>
-
         </div>
         <div class="term-line"><span class="prompt">~$</span><span class="cmd">cat contact.json</span></div>
         <div class="term-out">
@@ -357,10 +342,10 @@
       </div>
     </div>
   </section>
+
   <footer>
     <span data-fr="Site développé par Asmaou BAH, avec HTML5, CSS3 et JavaScript." data-en="Site developed by Asmaou BAH, with HTML5, CSS3 and JavaScript.">Site développé par Asmaou BAH, avec HTML5, CSS3 et JavaScript.</span>
-
-    <span data-fr="© 2026 Asmaou BAH — Portfolio IA & Data" data-en="© 2026 Asmaou BAH — AI & Data Portfolio"> &copy; 2026 Asmaou BAH — IA & Data</span>
+    <span data-fr="© 2026 Asmaou BAH — Portfolio IA & Data" data-en="© 2026 Asmaou BAH — AI & Data Portfolio">&copy; 2026 Asmaou BAH — IA & Data</span>
   </footer>
 
   <script src="main.js"></script>

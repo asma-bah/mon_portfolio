@@ -1,7 +1,6 @@
 /* =============================================
    main.js — Portfolio Asmaou BAH
    ============================================= */
-
 let lang = 'fr';
 let dark = true;
 
@@ -12,9 +11,7 @@ function go(id) {
   const offset = 70;
   const top = el.getBoundingClientRect().top + window.scrollY - offset;
   window.scrollTo({ top, behavior: 'smooth' });
-  // Ferme le menu mobile si ouvert
-  document.getElementById('nav-menu')?.classList.remove('open');
-  document.getElementById('menu-bt')?.classList.remove('open');
+  // Ne ferme plus le menu mobile au clic sur un lien
 }
 
 // ---- LANGUE ----
@@ -47,11 +44,11 @@ function initReveal() {
       }
     });
   }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
-
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 }
 
 // ---- NAV SCROLL EFFECT ----
+// Uniquement l'effet visuel (fond flouté), ne cache pas la nav
 function initNavScroll() {
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -75,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initNavScroll();
   initHamburger();
-
   // Déclenche les éléments déjà visibles au chargement
   document.querySelectorAll('.reveal').forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight * 0.95) {
