@@ -8,10 +8,12 @@ let dark = true;
 function go(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  const offset = 60;
+  const offset = 70;
   const top = el.getBoundingClientRect().top + window.scrollY - offset;
   window.scrollTo({ top, behavior: 'smooth' });
-  // Ne ferme plus le menu mobile au clic sur un lien
+  // Ferme le menu mobile après clic sur un lien
+  document.getElementById('nav-menu')?.classList.remove('open');
+  document.getElementById('menu-bt')?.classList.remove('open');
 }
 
 // ---- LANGUE ----
