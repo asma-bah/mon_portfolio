@@ -166,9 +166,9 @@ body {
 .menu-bt.open span:nth-child(2) { opacity: 0; }
 .menu-bt.open span:nth-child(3) { transform: rotate(-45deg) translate(4px,-4px); }
 
-/* =============================================
+/*****
    hero
-   ============================================= */
+  **** */
 .hero {
   padding: 6rem 2.5rem 5.5rem;
   border-bottom: 0.5px solid var(--border);
@@ -498,6 +498,18 @@ Style des compétences en mode défilement horizontal
     color: var(--text); margin-bottom: .2rem; 
 }
 .educ-item p { font-size: 13px; color: var(--muted2); line-height: 1.75; }
+
+/*****
+   section DISTINCTIONS
+  **** */
+.dist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.dist-card { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; transition: border-color .2s; }
+.dist-card:hover { border-color: var(--abd); }
+.dist-icon { font-size: 30px; color: var(--amber); }
+.dist-sub { font-size: 11px; color: var(--amber); font-family: var(--mono); letter-spacing: .3px; }
+.dist-card h3 { font-size: 17px; font-weight: normal; color: var(--text); }
+.dist-card p { font-size: 13px; color: var(--muted2); line-height: 1.8; }
+.dist-badge { display: inline-block; font-size: 11px; color: var(--amber); background: var(--abg); padding: 4px 10px; border-radius: 3px; border: 0.5px solid var(--abd); align-self: flex-start; font-family: var(--mono); }
 
 
 /****
