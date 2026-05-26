@@ -45,22 +45,38 @@
   </nav>
 
   <!--- section Accueil -->
-  <section class="hero reveal" id="home">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <div class="hero-kicker reveal-child" data-fr="IA & DATA" data-en="AI & DATA">IA & DATA</div>
-        <div class="hero-name reveal-child">
-          Asmaou
-          <span class="outline">BAH.</span>
+  <section class="hero reveal visible" id="home">
+    <div class="hero-inner visible">
+      <div class="hero-left visible">
+        <div class="hero-kicker reveal-child visible" data-fr="IA & DATA" data-en="AI & DATA">IA & DATA</div>
+
+        <!-- Nom + photo côte à côte sur mobile -->
+        <div class="hero-name-row">
+          <div class="hero-name reveal-child visible">
+            Asmaou
+            <span class="outline">BAH.</span>
+          </div>
+          <div class="hero-photo-mobile reveal-child visible">
+            <img src="images/asmaou.jpg" alt="Photo de Asmaou BAH">
+          </div>
         </div>
-        <p class="hero-desc reveal-child"
+
+        <!-- Poste recherché avec point clignotant -->
+        <div class="hero-poste reveal-child visible">
+          <span class="poste-dot"></span>
+          <span data-fr="Alternance IA & Data — sept. 2026" data-en="AI & Data Work-Study — Sept. 2026">Alternance IA &amp; Data — sept. 2026</span>
+        </div>
+
+        <p class="hero-desc reveal-child visible"
            data-fr="Future ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026"
            data-en="Future Engineer in Artificial Intelligence and Data, looking for a work-study program starting September 2026">
           Future ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026
         </p>
-        <div class="hero-btns reveal-child">
+        <div class="hero-btns reveal-child visible">
           <a href="CV_Asmaou.pdf" class="btn-a" target="_blank" data-fr="Voir mon CV →" data-en="See my CV →">Voir mon CV →</a>
-          <a class="btn-b" onclick="go('cont')" data-fr="Me contacter" data-en="Contact Me">Me contacter</a>
+          <a class="btn-b btn-contact" onclick="go('cont')" data-fr="Me contacter" data-en="Contact Me">
+            <span class="contact-dot"></span>Me contacter
+          </a>
         </div>
         <div class="hero-socials">
           <a href="https://linkedin.com/in/asmaou-bah" target="_blank" class="soc">
@@ -71,7 +87,8 @@
           </a>
         </div>
       </div>
-      <div class="hero-photo reveal-child">
+      <!-- Photo desktop uniquement -->
+      <div class="hero-photo hero-photo-desktop reveal-child visible">
         <img src="images/asmaou.jpg" alt="Photo de Asmaou BAH" class="hero-img">
       </div>
     </div>
@@ -132,10 +149,10 @@
   </div>
 
   <!--- Section compétences -->
-  <section class="section reveal" id="sk">
+  <section class="section reveal visible" id="sk">
     <div class="sec-head"><span data-fr="Compétences" data-en="Skills">Compétences</span></div>
     <div class="sk-rows">
-      <div class="sk-row reveal-child">
+      <div class="sk-row reveal-child visible">
         <span class="sk-cat" data-fr="IA & Data" data-en="AI & Data">IA & Data</span>
         <div class="sk-pills">
           <span class="sk-p hi">CNN</span><span class="sk-p hi">Scikit-learn</span><span class="sk-p hi">MCTS</span><span class="sk-p hi">Behavior Tree</span>
@@ -145,7 +162,7 @@
           <span class="sk-p hi">Pandas</span><span class="sk-p hi">NumPy</span><span class="sk-p hi">Matplotlib</span>
         </div>
       </div>
-      <div class="sk-row reveal-child">
+      <div class="sk-row reveal-child visible">
         <span class="sk-cat" data-fr="Langages de programmation et Web" data-en="Programming and Web Languages">Langages de programmation et Web</span>
         <div class="sk-pills">
           <span class="sk-p hi">Python</span><span class="sk-p">R</span>
@@ -154,20 +171,20 @@
           <span class="sk-p hi">HTML5</span><span class="sk-p hi">CSS3</span>
         </div>
       </div>
-      <div class="sk-row reveal-child">
+      <div class="sk-row reveal-child visible">
         <span class="sk-cat" data-fr="Bases de données" data-en="Databases">Bases de données</span>
         <div class="sk-pills">
           <span class="sk-p">SQL</span><span class="sk-p hi">PostgreSQL</span><span class="sk-p">MySQL</span>
         </div>
       </div>
-      <div class="sk-row reveal-child">
+      <div class="sk-row reveal-child visible">
         <span class="sk-cat" data-fr="Outils et Frameworks" data-en="Tools and Frameworks">Outils et Frameworks</span>
         <div class="sk-pills">
           <span class="sk-p hi">Git - GitHub</span><span class="sk-p">OpenGL</span>
           <span class="sk-p">Django</span><span class="sk-p">Angular</span><span class="sk-p">SpringBoot</span><span class="sk-p hi">PowerBI</span>
         </div>
       </div>
-      <div class="sk-row reveal-child">
+      <div class="sk-row reveal-child visible">
         <span class="sk-cat" data-fr="Langues" data-en="Languages">Langues</span>
         <div class="sk-pills">
           <span class="sk-p hi" data-fr="Poular - Natif" data-en="Pular - Native">Poular - Natif</span>
@@ -179,10 +196,10 @@
   </section>
 
   <!--- Section expérience professionnelle -->
-  <section class="section reveal" id="exp">
+  <section class="section reveal visible" id="exp">
     <div class="sec-head"><span data-fr="Expériences professionnelles" data-en="Professional Experience">Expériences professionnelles</span></div>
     <div class="proj-list">
-      <div class="proj-card reveal-child">
+      <div class="proj-card reveal-child visible">
         <div class="proj-img">
           <img src="images/avion.png" alt="Simulateur d'avion">
         </div>
@@ -281,9 +298,9 @@
   </section>
 
   <!-- Section formation -->
-  <section class="section reveal" id="educ">
+  <section class="section reveal visible" id="educ">
     <div class="sec-head"><span data-fr="Formations" data-en="Education">Formations</span></div>
-    <div class="educ-item reveal-child">
+    <div class="educ-item reveal-child visible">
       <div>
         <p class="educ-date">2023 — 2026</p>
         <p class="educ-school" data-fr="Université d'Angers" data-en="University of Angers">Université d'Angers</p>
@@ -296,7 +313,7 @@
         </p>
       </div>
     </div>
-    <div class="educ-item reveal-child">
+    <div class="educ-item reveal-child visible">
       <div>
         <p class="educ-date">2020 — 2021</p>
         <p class="educ-school" data-fr="Groupe Scolaire Privé Hadja Hafsatou - Guinée" data-en="Private School Hadja Hafsatou - Guinea">Groupe Scolaire Privé Hadja Hafsatou - Guinée</p>

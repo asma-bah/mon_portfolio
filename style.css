@@ -50,6 +50,7 @@ body {
   font-size: 15px;
   line-height: 1.65;
   transition: var(--trans);
+  padding-top: 48px;
 }
 
 /***
@@ -81,15 +82,15 @@ body {
 
 
 /**
-    Style de la barre de navigation
-   ****/
+    Style de la barre de navigation — FIXE
+****/
 .navbar {
-  position: sticky; top: 0; z-index: 200;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   display: flex; 
   justify-content: space-between; 
   align-items: center;
   padding: 0 2.5rem;
-  height: 40px;
+  height: 48px;
   background: var(--bg);
   border-bottom: 0.5px solid var(--border2);
   transition: var(--trans);
@@ -106,7 +107,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Nav-links : visible en flex sur desktop, caché sur mobile (géré dans responsive.css) */
 .nav-links { display: flex; gap: 1.35rem; }
 .nav-links a {
   font-size: 12px; color: var(--muted); text-decoration: none;
@@ -196,20 +196,63 @@ body {
     display: inline-block; 
 }
 
+/* Ligne nom + mini photo (mobile uniquement) */
+.hero-name-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+/* Photo mini à droite du nom — cachée sur desktop */
+.hero-photo-mobile {
+  display: none;
+  width: 85px; height: 105px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 0.5px solid var(--border2);
+  flex-shrink: 0;
+}
+.hero-photo-mobile img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+
+/* Grande photo desktop */
+.hero-photo-desktop {
+  width: 175px; height: 215px; border-radius: var(--radius);
+  overflow: hidden; background: var(--bg3);
+  border: 0.5px solid var(--border2); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-photo-desktop img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+
 .hero-name {
   font-size: clamp(50px, 8.5vw, 86px);
   font-weight: normal; line-height: .92;
   letter-spacing: -3px; color: var(--text);
-  margin-bottom: 1.75rem;
+  margin-bottom: 0;
 }
 .hero-name .outline {
   display: block; color: transparent;
   -webkit-text-stroke: 1px var(--muted);
   letter-spacing: -3px;
 }
-
 body.light .hero-name .outline { 
     -webkit-text-stroke: 1px var(--muted2); 
+}
+
+/* Poste recherché avec point clignotant */
+.hero-poste {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--amber);
+  font-family: var(--mono); letter-spacing: .5px;
+  margin-bottom: 1.25rem; margin-top: 1rem;
+  background: var(--abg); border: 0.5px solid var(--abd);
+  padding: 6px 14px; border-radius: 20px;
+}
+.poste-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--amber); flex-shrink: 0;
+  animation: blink 1.5s infinite;
 }
 
 .hero-desc {
@@ -236,6 +279,8 @@ body.light .hero-name .outline {
   transition: opacity .15s;
 }
 .btn-a:hover { opacity: .82; }
+
+/* Bouton Me contacter avec point clignotant */
 .btn-b {
   display: inline-flex; align-items: center; gap: 7px;
   padding: 10px 22px; background: transparent; color: var(--muted2);
@@ -245,6 +290,11 @@ body.light .hero-name .outline {
   transition: border-color .15s, color .15s;
 }
 .btn-b:hover { border-color: var(--muted); color: var(--text); }
+.contact-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--amber); flex-shrink: 0;
+  animation: blink 1.5s infinite;
+}
 
 .hero-socials {
   display: flex; gap: 1.5rem; margin-top: 2rem;
@@ -258,20 +308,19 @@ body.light .hero-name .outline {
 }
 .soc:hover { color: var(--amber); }
 
+/* Ancienne classe hero-photo conservée pour compatibilité */
 .hero-photo {
   width: 175px; height: 215px; border-radius: var(--radius);
   overflow: hidden; background: var(--bg3);
   border: 0.5px solid var(--border2); flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
 }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.photo{ text-align: center; padding: 1.25rem; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 
 
 /**
 Style des compétences en mode défilement horizontal
 ***/
-
 .ticker-wrap {
   overflow: hidden; padding: .85rem 0;
   border-top: 0.5px solid var(--border);
@@ -321,7 +370,7 @@ Style des compétences en mode défilement horizontal
   overflow: hidden; border: 0.5px solid var(--border2);
   background: var(--bg3); flex-shrink: 0;
 }
-.about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 
 .about-content { display: flex; flex-direction: column; gap: 1.75rem; }
 .about-block { display: flex; flex-direction: column; gap: .6rem; }
@@ -340,11 +389,12 @@ Style des compétences en mode défilement horizontal
 } 
 
 /* 
-   section compétences
+   section compétences — desktop
 */
 .sk-rows { display: flex; flex-direction: column; gap: 1.35rem; }
-.sk-row { display: grid; grid-template-columns: 160px 1fr; 
-    gap: 2rem; align-items: start; 
+.sk-row { 
+  display: grid; grid-template-columns: 160px 1fr; 
+  gap: 2rem; align-items: start; 
 }
 .sk-cat { font-size: 11px; color: var(--muted); 
     padding-top: 6px; font-family: var(--mono); 
@@ -364,7 +414,6 @@ Style des compétences en mode défilement horizontal
 /*
 ***   section expérience et projets
  ****/
-
 .proj-list { display: flex; flex-direction: column; gap: 1.5rem; }
 
 .proj-card {
