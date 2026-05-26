@@ -1,6 +1,5 @@
-/* =============================================
-   main.js — Portfolio Asmaou BAH
-   ============================================= */
+/* ce fichier contient le JavaScript pour le portfolio, elle gère les interactions et les animations du site */
+
 let lang = 'fr';
 let dark = true;
 
@@ -16,7 +15,7 @@ function go(id) {
   document.getElementById('menu-bt')?.classList.remove('open');
 }
 
-// ---- LANGUE ----
+// ---- pour changer de langue ----
 function setLang(l) {
   lang = l;
   document.getElementById('lang-select').value = l;
@@ -27,7 +26,7 @@ function setLang(l) {
   });
 }
 
-// ---- THÈME ----
+// ---- changer de thème ----
 function toggleTheme() {
   dark = !dark;
   document.body.classList.toggle('dark', dark);
@@ -35,7 +34,7 @@ function toggleTheme() {
   document.getElementById('theme-icon').textContent = dark ? '☽' : '☀';
 }
 
-// ---- SCROLL REVEAL ----
+// ---- effet scroll reveal ----
 function initReveal() {
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -50,7 +49,7 @@ function initReveal() {
 }
 
 // ---- NAV SCROLL EFFECT ----
-// Uniquement l'effet visuel (fond flouté), ne cache pas la nav
+// Uniquement l'effet visuel (fond flouté), ne cache pas la barre de navigation, pour garder les liens accessibles facilement
 function initNavScroll() {
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {

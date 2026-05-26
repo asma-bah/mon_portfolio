@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asmaou BAH - Portfolio IA & DATA</title>
-  <meta name="description" content="Découvrez le portfolio d'Asmaou BAH, future ingénieure en Intelligence Artificielle et Data Science. Explorez ses projets, ses compétences techniques et son parcours professionnel dans le domaine de l'IA et de la data.">
+  <meta name="description" content="Portfolio d'Asmaou BAH, future ingénieure en Intelligence Artificielle et Data Science à l'INSA Hauts-de-France. Explorez ses projets, compétences et parcours.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
@@ -27,12 +27,10 @@
       <a onclick="go('dist')" data-fr="Distinction" data-en="Distinction">Distinction</a>
       <a onclick="go('cont')" data-fr="Contact" data-en="Contact">Contact</a>
     </div>
-    <div class="nav-status">
+    <!--<div class="nav-status">
       <span class="ndot"></span>
       <span data-fr="Dispo sept. 2026" data-en="Available from Sept. 2026">Dispo sept. 2026</span>
-    </div>
-
-    <!-- Contrôles : langue et thème -->
+    </div>-->
     <div class="nav-right">
       <select class="ctrl-select" id="lang-select" onchange="setLang(this.value)">
         <option value="fr">FR</option>
@@ -45,39 +43,45 @@
   </nav>
 
   <!--- section Accueil -->
-  <section class="hero reveal visible" id="home">
-    <div class="hero-inner visible">
-      <div class="hero-left visible">
-        <div class="hero-kicker reveal-child visible" data-fr="IA & DATA" data-en="AI & DATA">IA & DATA</div>
+  <section class="hero reveal" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-kicker reveal-child" data-fr="IA & DATA" data-en="AI & DATA">IA & DATA</div>
 
-        <!-- Nom + photo côte à côte sur mobile -->
         <div class="hero-name-row">
-          <div class="hero-name reveal-child visible">
+          <div class="hero-name reveal-child">
             Asmaou
             <span class="outline">BAH.</span>
           </div>
-          <div class="hero-photo-mobile reveal-child visible">
+          <div class="hero-photo-mobile reveal-child">
             <img src="images/asmaou.jpg" alt="Photo de Asmaou BAH">
           </div>
         </div>
 
-        <!-- Poste recherché avec point clignotant -->
-        <div class="hero-poste reveal-child visible">
+        <div class="hero-poste reveal-child">
           <span class="poste-dot"></span>
-          <span data-fr="Alternance IA & Data — sept. 2026" data-en="AI & Data Work-Study — Sept. 2026">Alternance IA &amp; Data — sept. 2026</span>
+          <span data-fr="Recherche d'alternance — septembre 2026"
+                data-en="Looking for a work-study program — September 2026">
+            Recherche d'alternance — septembre 2026
+          </span>
         </div>
 
-        <p class="hero-desc reveal-child visible"
-           data-fr="Future ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026"
-           data-en="Future Engineer in Artificial Intelligence and Data, looking for a work-study program starting September 2026">
-          Future ingénieure en Intelligence Artificielle et Data, je suis à la recherche d'une alternance à partir de septembre 2026
-        </p>
-        <div class="hero-btns reveal-child visible">
+          <p class="hero-desc reveal-child"
+            data-fr="Finalisant cette année ma licence informatique à l'Université d'Angers, j'ai été placée en recherche de contrat d'alternance à l'INSA Hauts-de-France en IA et Data Computing."
+            data_en="Completing this year my Computer Science degree at the University of Angers. I am now looking for a work-study contract at INSA Hauts-de-France in AI and Data Computing.">
+            Finalisant cette année ma licence informatique à l'Université d'Angers, 
+            j'ai été placée en recherche de contrat d'alternance à l'INSA Hauts-de-France en IA et Data Computing.
+            Je recherche donc un contrat d'alternance à partir de septembre 2026 pour une période de 2 ans.
+          </p>
+
+
+        <div class="hero-btns reveal-child">
           <a href="CV_Asmaou.pdf" class="btn-a" target="_blank" data-fr="Voir mon CV →" data-en="See my CV →">Voir mon CV →</a>
-          <a class="btn-b btn-contact" onclick="go('cont')" data-fr="Me contacter" data-en="Contact Me">
+          <a class="btn-b" onclick="go('cont')" data-fr="Me contacter" data-en="Contact Me">
             <span class="contact-dot"></span>Me contacter
           </a>
         </div>
+
         <div class="hero-socials">
           <a href="https://linkedin.com/in/asmaou-bah" target="_blank" class="soc">
             <i class="fa-brands fa-linkedin"></i> LinkedIn
@@ -87,9 +91,9 @@
           </a>
         </div>
       </div>
-      <!-- Photo desktop uniquement -->
-      <div class="hero-photo hero-photo-desktop reveal-child visible">
-        <img src="images/asmaou.jpg" alt="Photo de Asmaou BAH" class="hero-img">
+
+      <div class="hero-photo hero-photo-desktop reveal-child">
+        <img src="images/asmaou.jpg" alt="Photo de Asmaou BAH">
       </div>
     </div>
   </section>
@@ -100,31 +104,37 @@
     <div class="about-grid">
 
       <div class="about-photo reveal-child">
-        <img src="images/asmaou.jpg" alt="Asmaou BAH">
+        <img src="images/anmaou.jpg" alt="Asmaou BAH">
       </div>
 
       <div class="about-content">
         <div class="about-block reveal-child">
           <span class="about-label" data-fr="Qui suis-je ?" data-en="Who am I?">Qui suis-je ?</span>
-          <p data-fr="Je m'appelle Asmaou BAH, étudiante en troisième année de licence informatique à l'Université d'Angers. Passionnée par les mathématiques depuis toujours, j'ai naturellement trouvé ma voie dans l'intelligence artificielle et la data science — des domaines où la rigueur mathématique rencontre des applications concrètes et impactantes."
-             data-en="My name is Asmaou BAH, a third-year computer science student at the University of Angers. Passionate about mathematics from an early age, I naturally found my path in artificial intelligence and data science — fields where mathematical rigor meets concrete and impactful applications.">
-            Je m'appelle Asmaou BAH, étudiante en troisième année de licence informatique à l'Université d'Angers. Passionnée par les mathématiques depuis toujours, j'ai naturellement trouvé ma voie dans l'intelligence artificielle et la data science — des domaines où la rigueur mathématique rencontre des applications concrètes et impactantes.
+          <p data-fr="Je m'appelle Asmaou BAH et je suis diplômée d'une licence informatique de l'Université d'Angers. Passionnée par les mathématiques depuis le lycée, je me suis progressivement orientée vers l'intelligence artificielle et la data science. J'aime apprendre, comprendre le fonctionnement des systèmes et développer des projets qui me permettent d'améliorer mes compétences techniques et ma réflexion."
+             data-en="My name is Asmaou BAH and I graduated with a Computer Science degree from the University of Angers. Passionate about mathematics since high school, I gradually specialized in artificial intelligence and data science. I enjoy learning, understanding how systems work and developing projects that help me improve both my technical and analytical skills.">
+            Je m'appelle Asmaou BAH et je viens de finir ma licence informatique de l'Université d'Angers. 
+            Passionnée par les mathématiques depuis le lycée, je me suis progressivement orientée vers l'intelligence artificielle et la data science. 
+            J'aime apprendre, comprendre le fonctionnement des systèmes et développer des projets qui me permettent d'améliorer mes compétences techniques et ma réflexion.
           </p>
         </div>
 
         <div class="about-block reveal-child">
           <span class="about-label" data-fr="Ce que je fais actuellement" data-en="What I'm doing now">Ce que je fais actuellement</span>
-          <p data-fr="Je termine ma licence informatique en juin 2026, après un stage de recherche au laboratoire LERIA de l'Université d'Angers où j'ai développé un simulateur d'avion de guerre en C++/OpenGL avec une IA adversariale basée sur les arbres de comportement. Je prépare activement mon entrée en master, et je suis à la recherche d'une alternance de 2 ans à partir de septembre 2026 dans le domaine de l'IA et de la data."
-             data-en="I am finishing my computer science degree in June 2026, after a research internship at the LERIA laboratory at the University of Angers where I developed a war aircraft simulator in C++/OpenGL with adversarial AI based on behavior trees. I am actively preparing for my master's degree and looking for a 2-year work-study program starting September 2026 in AI and data.">
-            Je termine ma licence informatique en juin 2026, après un stage de recherche au laboratoire LERIA de l'Université d'Angers où j'ai développé un simulateur d'avion de guerre en C++/OpenGL avec une IA adversariale basée sur les arbres de comportement. Je prépare activement mon entrée en master, et je suis à la recherche d'une alternance de 2 ans à partir de septembre 2026 dans le domaine de l'IA et de la data.
+          <p data-fr="Après l'obtention de ma licence informatique et la réalisation de mon stage de recherche au laboratoire LERIA de l'Université d'Angers, je prépare désormais mon entrée en cycle de Master à l'INSA Hauts-de-France. Je recherche activement une alternance de 2 ans à partir de septembre 2026 dans les domaines de l'intelligence artificielle et de la data."
+             data-en="After completing my Computer Science degree and a research internship at the LERIA laboratory of the University of Angers, I am now preparing to join the Master's program at INSA Hauts-de-France. I am looking  for a two-year work-study position starting in September 2026 in artificial intelligence and data.">
+            Après l'obtention de ma licence informatique et la réalisation de mon stage de recherche au laboratoire LERIA de l'Université d'Angers, je prépare désormais mon entrée en cycle de Master à l'INSA Hauts-de-France. 
+            Je recherche activement une alternance de 2 ans à partir de septembre 2026 dans les domaines de l'intelligence artificielle et de la data.
           </p>
         </div>
 
         <div class="about-block reveal-child">
           <span class="about-label" data-fr="Ma passion" data-en="My passion">Ma passion</span>
-          <p data-fr="Les mathématiques sont au cœur de tout ce que je fais. La beauté d'une démonstration, la puissance d'un algorithme bien conçu, la satisfaction de voir un modèle apprendre — c'est ce qui me motive chaque jour. J'aime aussi lire (chroniques, poésie, histoires sur Wattpad) et voyager pour découvrir d'autres cultures et façons de voir le monde."
-             data-en="Mathematics is at the heart of everything I do. The beauty of a proof, the power of a well-designed algorithm, the satisfaction of watching a model learn — that's what motivates me every day. I also love reading (chronicles, poetry, stories on Wattpad) and traveling to discover other cultures and ways of seeing the world.">
-            Les mathématiques sont au cœur de tout ce que je fais. La beauté d'une démonstration, la puissance d'un algorithme bien conçu, la satisfaction de voir un modèle apprendre — c'est ce qui me motive chaque jour. J'aime aussi lire (chroniques, poésie, histoires sur Wattpad) et voyager pour découvrir d'autres cultures et façons de voir le monde.
+          <p data-fr="Ce que j'aime dans l'informatique, c'est le fait de pouvoir transformer des idées en projets concrets. J'apprécie particulièrement les domaines liés aux mathématiques, à l'algorithmique, à l'intelligence artificielle et à l'apprentissage automatique. En dehors des études, j'aime lire, découvrir de nouvelles cultures et voyager. Ces expériences m'aident à rester curieuse, ouverte d'esprit et motivée dans tout ce que j'entreprends."
+             data-en="What I enjoy most about computer science is turning ideas into concrete projects. I am especially interested in mathematics, algorithms, artificial intelligence and machine learning. Outside of my studies, I enjoy reading, discovering new cultures and traveling. These experiences help me stay curious, open-minded and motivated in everything I do.">
+            Ce que j'aime dans l'informatique, c'est le fait de pouvoir transformer des idées en projets concrets. 
+            J'apprécie particulièrement les domaines liés aux mathématiques, à l'algorithmique, à l'intelligence artificielle et à l'apprentissage automatique.
+            En dehors des études, j'aime lire, découvrir de nouvelles cultures et voyager. 
+            Ces expériences m'aident à rester curieuse, ouverte d'esprit et motivée dans tout ce que j'entreprends.
           </p>
         </div>
 
@@ -140,7 +150,7 @@
     </div>
   </section>
 
-  <!--- afficher les compétences en mode ticker -->
+  <!--- ticker compétences -->
   <div class="ticker-wrap">
     <div class="ticker">
       <span>Python</span><span>Machine Learning</span><span>SQL</span><span>TensorFlow</span><span>PyTorch</span><span>C++</span><span>R</span><span>CNN</span><span>RNN</span><span>Matplotlib</span><span>MCTS</span><span>Behavior Tree</span><span>Machine Learning</span><span>Power BI</span><span>Java</span><span>NumPy</span><span>Pandas</span><span>Pytorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Git</span>
@@ -149,10 +159,10 @@
   </div>
 
   <!--- Section compétences -->
-  <section class="section reveal visible" id="sk">
+  <section class="section reveal" id="sk">
     <div class="sec-head"><span data-fr="Compétences" data-en="Skills">Compétences</span></div>
     <div class="sk-rows">
-      <div class="sk-row reveal-child visible">
+      <div class="sk-row reveal-child">
         <span class="sk-cat" data-fr="IA & Data" data-en="AI & Data">IA & Data</span>
         <div class="sk-pills">
           <span class="sk-p hi">CNN</span><span class="sk-p hi">Scikit-learn</span><span class="sk-p hi">MCTS</span><span class="sk-p hi">Behavior Tree</span>
@@ -162,7 +172,7 @@
           <span class="sk-p hi">Pandas</span><span class="sk-p hi">NumPy</span><span class="sk-p hi">Matplotlib</span>
         </div>
       </div>
-      <div class="sk-row reveal-child visible">
+      <div class="sk-row reveal-child">
         <span class="sk-cat" data-fr="Langages de programmation et Web" data-en="Programming and Web Languages">Langages de programmation et Web</span>
         <div class="sk-pills">
           <span class="sk-p hi">Python</span><span class="sk-p">R</span>
@@ -171,20 +181,20 @@
           <span class="sk-p hi">HTML5</span><span class="sk-p hi">CSS3</span>
         </div>
       </div>
-      <div class="sk-row reveal-child visible">
+      <div class="sk-row reveal-child">
         <span class="sk-cat" data-fr="Bases de données" data-en="Databases">Bases de données</span>
         <div class="sk-pills">
           <span class="sk-p">SQL</span><span class="sk-p hi">PostgreSQL</span><span class="sk-p">MySQL</span>
         </div>
       </div>
-      <div class="sk-row reveal-child visible">
+      <div class="sk-row reveal-child">
         <span class="sk-cat" data-fr="Outils et Frameworks" data-en="Tools and Frameworks">Outils et Frameworks</span>
         <div class="sk-pills">
           <span class="sk-p hi">Git - GitHub</span><span class="sk-p">OpenGL</span>
           <span class="sk-p">Django</span><span class="sk-p">Angular</span><span class="sk-p">SpringBoot</span><span class="sk-p hi">PowerBI</span>
         </div>
       </div>
-      <div class="sk-row reveal-child visible">
+      <div class="sk-row reveal-child">
         <span class="sk-cat" data-fr="Langues" data-en="Languages">Langues</span>
         <div class="sk-pills">
           <span class="sk-p hi" data-fr="Poular - Natif" data-en="Pular - Native">Poular - Natif</span>
@@ -196,10 +206,10 @@
   </section>
 
   <!--- Section expérience professionnelle -->
-  <section class="section reveal visible" id="exp">
+  <section class="section reveal" id="exp">
     <div class="sec-head"><span data-fr="Expériences professionnelles" data-en="Professional Experience">Expériences professionnelles</span></div>
     <div class="proj-list">
-      <div class="proj-card reveal-child visible">
+      <div class="proj-card reveal-child">
         <div class="proj-img">
           <img src="images/avion.png" alt="Simulateur d'avion">
         </div>
@@ -209,15 +219,14 @@
             <span class="proj-badge" data-fr="LERIA, Université d'Angers" data-en="LERIA, University of Angers">LERIA, Université d'Angers</span>
           </div>
           <h3 data-fr="Stage — Développement d'un simulateur d'avion de guerre" data-en="Internship — Development of a military aircraft simulator">Stage — Développement d'un simulateur d'avion de guerre</h3>
-          <p data-fr="Développement d'un simulateur d'avion de guerre en C++ avec rendu 3D en OpenGL, ainsi que la mise en place d'une intelligence artificielle capable d'attaquer et d'éviter un joueur en temps réel, en utilisant des techniques d'arbres de comportement pour la prise de décision."
-             data-en="Development of a military aircraft simulator in C++ with 3D rendering in OpenGL, as well as the implementation of an artificial intelligence capable of attacking and avoiding a player in real-time, using behavior tree techniques for decision-making.">
-            Développement d'un simulateur d'avion de guerre en C++ avec rendu 3D en OpenGL, ainsi que la mise en place d'une intelligence artificielle capable d'attaquer et d'éviter un joueur en temps réel, en utilisant des techniques d'arbres de comportement pour la prise de décision.
+          <p data-fr="Lors de mon stage de recherche réalisé en binôme au laboratoire LERIA de l'Université d'Angers, nous avons développé un simulateur d'avion de guerre en C++ avec affichage 3D sous OpenGL. J'ai également participé à la conception du comportement d'une intelligence artificielle capable d'interagir avec le joueur en temps réel grâce à des arbres de comportement. Ce projet m'a permis de renforcer mes compétences en programmation, en travail d'équipe et en développement de projets complexes."
+             data-en="During my research internship carried out as part of a two-person team at the LERIA laboratory of the University of Angers, we developed a military aircraft simulator in C++ with 3D rendering using OpenGL. I also contributed to the design of an artificial intelligence able to interact with the player in real time using behavior trees. This project strengthened my programming, teamwork and software development skills.">
+            Lors de mon stage de recherche réalisé en binôme au laboratoire LERIA de l'Université d'Angers, nous avons développé un simulateur d'avion de guerre en C++ avec affichage 3D sous OpenGL. 
+            J'ai également participé à la conception du comportement d'une intelligence artificielle capable d'interagir avec le joueur en temps réel grâce à des arbres de comportement. 
+            Ce projet m'a permis de renforcer mes compétences en programmation, en travail d'équipe et en développement de projets complexes.
           </p>
           <div class="proj-tags">
-            <span>C++</span>
-            <span>OpenGL</span>
-            <span>IA</span>
-            <span>3D</span>
+            <span>C++</span><span>OpenGL</span><span>IA</span><span>3D</span>
           </div>
           <a class="proj-gh" href="https://github.com/asma-bah/Baron_Rouge" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
         </div>
@@ -225,7 +234,7 @@
     </div>
   </section>
 
-  <!-- Section projets académiques et personnels -->
+  <!-- Section projets académiques -->
   <section class="section reveal" id="pro">
     <div class="sec-head"><span data-fr="Projets académiques" data-en="Academic Projects">Projets académiques</span></div>
     <div class="proj-list">
@@ -235,13 +244,13 @@
           <img src="images/class_images.webp" alt="Classification d'images">
         </div>
         <div class="proj-body">
-          <div class="proj-meta"><span class="proj-num">Mars · 2026</span><span class="proj-badge">Python</span></div>
+          <div class="proj-meta"><span class="proj-num" data-fr="Mars · 2026" data-en="March · 2026">Mars · 2026</span><span class="proj-badge">Python</span></div>
           <h3 data-fr="Classification d'images" data-en="Image Classification">Classification d'images</h3>
-          <p data-fr="Projet ML individuel multi-classes sur images couleur. Comparaison k-NN, régression logistique, réseaux de neurones et CNN. Évalué sur Codabench."
-             data-en="Individual multi-class ML project on color images. Comparison of k-NN, logistic regression, neural networks and CNN. Evaluated on Codabench.">
-            Projet ML individuel multi-classes sur images couleur. Comparaison k-NN, régression logistique, réseaux de neurones et CNN. Évalué sur Codabench.
+          <p data-fr="Projet réalisé dans le cadre d'un cours de machine learning en licence 3. L'objectif était de reconnaître différentes catégories d'images couleur à l'aide de plusieurs méthodes d'apprentissage automatique comme le k-NN, la régression logistique, les réseaux de neurones et les CNN. Ce projet m'a permis de découvrir concrètement les bases du traitement d'images et de comparer les performances de différents modèles."
+             data-en="Project completed as part of a machine learning course during my 3rd year. The objective was to recognize different categories of color images using several machine learning methods such as k-NN, logistic regression, neural networks and CNNs. This project allowed me to better understand image processing and compare the performance of different models.">
+            Projet réalisé dans le cadre d'un projet de machine learning en licence 3. L'objectif était de reconnaître différentes catégories d'images couleur à l'aide de plusieurs méthodes d'apprentissage automatique comme le k-NN, la régression logistique, les réseaux de neurones et les CNN. Ce projet m'a permis de découvrir concrètement les bases du traitement d'images et de comparer les performances de différents modèles.
           </p>
-          <div class="proj-tags"><span>Python</span><span>CNN</span><span>Scikit-learn</span><span>ML</span></div>
+          <div class="proj-tags"><span>Python</span><span>Machine Learning</span><span>CNN</span><span>Scikit-learn</span></div>
           <a class="proj-gh" href="https://github.com/asma-bah/Classification-d-images-en-Couleur-Machine-Learning-" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
         </div>
       </div>
@@ -251,13 +260,15 @@
           <img src="images/conway.gif" alt="Conway">
         </div>
         <div class="proj-body">
-          <div class="proj-meta"><span class="proj-num">Novembre · 2025</span><span class="proj-badge">C++</span></div>
+          <div class="proj-meta"><span class="proj-num" data-fr="Novembre · 2025" data-en="November · 2025">Novembre · 2025</span><span class="proj-badge">C++</span></div>
           <h3 data-fr="Jeu de la vie — Conway" data-en="Game of Life — Conway">Jeu de la vie — Conway</h3>
-          <p data-fr="Grille bidimensionnelle avec règles de Conway. Architecture orientée objet en C++, rendu graphique SFML."
-             data-en="2D grid with Conway's rules. OOP architecture in C++, SFML graphics.">
-            Grille bidimensionnelle avec règles de Conway. Architecture orientée objet en C++, rendu graphique SFML.
+          <p data-fr="Projet développé en C++ afin de reproduire le célèbre Jeu de la vie de Conway. J'ai travaillé sur une architecture orientée objet ainsi que sur l'affichage graphique avec la bibliothèque SFML. Ce projet m'a permis d'améliorer ma logique de programmation et ma compréhension des simulations."
+             data-en="C++ project developed to recreate Conway's famous Game of Life. I worked on object-oriented programming and graphical rendering using the SFML library. This project helped me improve my programming logic and better understand simulation systems.">
+            Projet développé en C++ afin de reproduire le célèbre Jeu de la vie de Conway. 
+            J'ai travaillé sur une architecture orientée objet ainsi que sur l'affichage graphique avec la bibliothèque SFML. 
+            Ce projet m'a permis d'améliorer ma logique de programmation et ma compréhension des simulations.
           </p>
-          <div class="proj-tags"><span>C++</span><span>SFML</span><span>POO</span></div>
+          <div class="proj-tags"><span>C++</span><span>SFML</span><span>Programmation objet</span></div>
           <a class="proj-gh" href="https://github.com/asma-bah/Jeu_De_La_Vie" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
         </div>
       </div>
@@ -269,11 +280,13 @@
         <div class="proj-body">
           <div class="proj-meta"><span class="proj-num" data-fr="Février · 2025" data-en="February · 2025">Février · 2025</span><span class="proj-badge">Java</span></div>
           <h3 data-fr="Morpion avec IA MCTS" data-en="Tic-Tac-Toe — MCTS AI">Morpion avec IA MCTS</h3>
-          <p data-fr="Jeu de morpion en Java avec une IA basée sur Monte Carlo Tree Search (MCTS). L'IA explore les coups par simulation aléatoire et sélectionne le meilleur via la formule UCB1. Interface graphique incluse."
-             data-en="Tic-Tac-Toe in Java with an AI based on Monte Carlo Tree Search (MCTS). The AI explores moves via random simulation and picks the best using the UCB1 formula. Includes a graphical interface.">
-            Jeu de morpion en Java avec une IA basée sur Monte Carlo Tree Search (MCTS). L'IA explore les coups par simulation aléatoire et sélectionne le meilleur via la formule UCB1. Interface graphique incluse.
+          <p data-fr="Développement d'un jeu de morpion en Java avec une intelligence artificielle basée sur l'algorithme Monte Carlo Tree Search (MCTS). L'IA choisit ses coups en simulant plusieurs parties possibles avant de prendre une décision. Ce projet m'a permis de découvrir les bases de l'intelligence artificielle appliquée aux jeux et d'approfondir mes connaissances en Java."
+             data-en="Development of a Tic-Tac-Toe game in Java with an artificial intelligence based on the Monte Carlo Tree Search (MCTS) algorithm. The AI selects its moves by simulating several possible games before making a decision. This project introduced me to game AI and helped me improve my Java skills.">
+            Développement du jeu de morpion en Java avec une intelligence artificielle basée sur l'algorithme Monte Carlo Tree Search (MCTS). 
+            L'IA choisit ses coups en simulant plusieurs parties possibles avant de prendre une décision. 
+            Ce projet m'a permis de découvrir les bases de l'intelligence artificielle appliquée aux jeux et d'approfondir mes connaissances en Java.
           </p>
-          <div class="proj-tags"><span>Java</span><span>MCTS</span><span>IA</span><span>UCB1</span></div>
+          <div class="proj-tags"><span>Java</span><span>IA</span><span>MCTS</span></div>
           <a class="proj-gh" href="https://github.com/asma-bah/morpion-mcts-java" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
         </div>
       </div>
@@ -283,13 +296,16 @@
           <img src="images/diamant.jpeg" alt="Jeu Diamant">
         </div>
         <div class="proj-body">
-          <div class="proj-meta"><span class="proj-num">Mai · 2024</span><span class="proj-badge">Python</span></div>
+          <div class="proj-meta"><span class="proj-num" data-fr="Mai · 2024" data-en="May · 2024">Mai · 2024</span><span class="proj-badge">Python</span></div>
           <h3 data-fr="Jeu Diamant" data-en="Diamond Game">Jeu Diamant</h3>
-          <p data-fr="Jeu console inspiré du jeu de société Diamant. IA simulant un joueur, site de présentation en HTML5/CSS3."
-             data-en="Console game inspired by the Diamant board game. AI simulating a player, HTML5/CSS3 website.">
-            Jeu console inspiré du jeu de société Diamant. IA simulant un joueur, site de présentation en HTML5/CSS3.
+          <p data-fr="Projet réalisé en binôme en Python, inspiré du jeu de société Diamant. Le joueur doit avancer dans la partie tout en prenant des décisions pour éviter les pièges et conserver ses gains. Nous avons également ajouté une intelligence artificielle simple afin de simuler le comportement des autres joueurs. Ce projet m'a permis de travailler la logique de jeu, la programmation en Python ainsi que le travail en équipe."
+             data-en="Project carried out as part of a two-person team in Python, inspired by the Diamant board game. The player progresses through the game while making decisions to avoid traps and keep rewards. We also added a simple artificial intelligence to simulate other players' behavior. This project helped me improve my game logic, Python programming and teamwork skills.">
+            Projet réalisé en binôme en Python, inspiré du jeu de société Diamant. 
+            Le joueur doit avancer dans la partie tout en prenant des décisions pour éviter les pièges et conserver ses gains. 
+            Nous avons également ajouté une intelligence artificielle simple afin de simuler le comportement des autres joueurs. 
+            Ce projet m'a permis de travailler la logique de jeu, la programmation en Python ainsi que le travail en équipe.
           </p>
-          <div class="proj-tags"><span>Python</span><span>IA</span><span>HTML/CSS</span></div>
+          <div class="proj-tags"><span>Python</span><span>Jeu</span><span>Logique</span><span>Travail en équipe</span></div>
           <a class="proj-gh" href="https://github.com/asma-bah" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
         </div>
       </div>
@@ -298,22 +314,35 @@
   </section>
 
   <!-- Section formation -->
-  <section class="section reveal visible" id="educ">
+  <section class="section reveal" id="educ">
     <div class="sec-head"><span data-fr="Formations" data-en="Education">Formations</span></div>
-    <div class="educ-item reveal-child visible">
+    <div class="educ-item reveal-child">
       <div>
         <p class="educ-date">2023 — 2026</p>
-        <p class="educ-school" data-fr="Université d'Angers" data-en="University of Angers">Université d'Angers</p>
+        <p class="educ-school" data-fr="Université d'Angers - France" data-en="University of Angers - France">Université d'Angers - France</p>
       </div>
       <div>
         <h3 data-fr="Licence informatique" data-en="Bachelor's in Computer Science">Licence informatique</h3>
-        <p data-fr="Algorithmique, programmation orientée objet, IA, bases de données, développement web, systèmes intelligents, machine learning."
-           data-en="Algorithms, OOP, AI, databases, web development, intelligent systems, machine learning.">
-          Algorithmique, programmation orientée objet, IA, bases de données, développement web, systèmes intelligents, machine learning.
+        <p data-fr="Algorithmique, programmation orientée objet, bases de données, développement web, systèmes intelligents, machine learning..."
+           data-en="Algorithms, OOP, databases, web development, intelligent systems, machine learning...">
+          Algorithmique, programmation orientée objet, bases de données, développement web, systèmes intelligents, machine learning...
         </p>
       </div>
     </div>
-    <div class="educ-item reveal-child visible">
+     <div class="educ-item reveal-child">
+      <div>
+        <p class="educ-date">2022 — 2023</p>
+        <p class="educ-school" data-fr="Université Gamal Abdel Nasser de Conakry - Guinée" data-en="University Gamal Abdel Nasser of Conakry - Guinea">Université Gamal Abdel Nasser de Conakry - Guinée</p>
+      </div>
+      <div>
+        <h3 data-fr="Licence 1 - Développement logiciel" data-en="Bachelor's in Computer Software">Licence 1 - Développement logiciel</h3>
+        <p data-fr="Algorithmique, bases de données, développement web, logique, architecture des ordinateurs..."
+           data-en="Algorithms, databases, web development, logic, computer architecture...">
+          Algorithmique, bases de données, développement web, logique, architecture des ordinateurs...
+        </p>
+      </div>
+    </div>
+    <div class="educ-item reveal-child">
       <div>
         <p class="educ-date">2020 — 2021</p>
         <p class="educ-school" data-fr="Groupe Scolaire Privé Hadja Hafsatou - Guinée" data-en="Private School Hadja Hafsatou - Guinea">Groupe Scolaire Privé Hadja Hafsatou - Guinée</p>
@@ -325,7 +354,7 @@
     </div>
   </section>
 
-   <!-- DISTINCTIONS -->
+  <!-- Section distinctions -->
   <section class="section reveal" id="dist">
     <div class="sec-head"><span data-fr="Distinctions" data-en="Distinctions">Distinctions</span></div>
     <div class="dist-grid">
@@ -333,9 +362,11 @@
         <span class="dist-icon">⬡</span>
         <p class="dist-sub" data-fr="2ème dauphine · Concours national · 2022" data-en="2nd runner-up · National competition · 2022">2ème dauphine · Concours national · 2022</p>
         <h3 data-fr="Miss Mathématiques — Guinée" data-en="Miss Mathematics — Guinea">Miss Mathématiques — Guinée</h3>
-        <p data-fr="2ème dauphine au concours national de Miss Mathématiques, organisé par le Ministère de l'Enseignement Pré-Universitaire de Guinée — une compétition récompensant l'excellence et la passion pour les mathématiques."
-           data-en="2nd runner-up at the national Miss Mathematics competition, organized by Guinea's Ministry of Pre-University Education — recognizing excellence and passion for mathematics.">
-          2ème dauphine au concours national de Miss Mathématiques, organisé par le Ministère de l'Enseignement Pré-Universitaire de Guinée — une compétition récompensant l'excellence et la passion pour les mathématiques.
+        <p data-fr="En 2022, j'ai obtenu la place de 2ème dauphine au concours national Miss Mathématiques en Guinée. Cette expérience a marqué mon parcours, car elle représente à la fois ma passion pour les mathématiques et les efforts que j'ai fournis tout au long de ma scolarité dans les matières scientifiques."
+           data-en="In 2022, I became 2nd runner-up in the national Miss Mathematics competition in Guinea. This experience was an important milestone in my journey, as it reflects both my passion for mathematics and the efforts I dedicated to scientific subjects throughout my education.">
+          En 2022, j'ai obtenu la place de 2ème dauphine au concours national Miss Mathématiques en Guinée. 
+          Cette expérience a marqué mon parcours, car elle représente à la fois ma passion pour les mathématiques et 
+          les efforts que j'ai fournis tout au long de ma scolarité dans les matières scientifiques.
         </p>
         <span class="dist-badge" data-fr="Niveau national" data-en="National level">Niveau national</span>
       </div>
@@ -343,9 +374,11 @@
         <span class="dist-icon">∑</span>
         <p class="dist-sub" data-fr="Passion fondatrice" data-en="Core passion">Passion fondatrice</p>
         <h3 data-fr="Un amour pour les mathématiques" data-en="A love for mathematics">Un amour pour les mathématiques</h3>
-        <p data-fr="Les maths sont à l'origine de tout mon parcours. La rigueur des démonstrations, la beauté des structures abstraites et la puissance du raisonnement logique m'ont naturellement conduite vers l'IA — où les mathématiques sont au cœur de chaque modèle."
-           data-en="Mathematics is at the root of my entire journey. The rigor of proofs, the beauty of abstract structures, and the power of logical reasoning naturally led me toward AI — where math is at the core of every model.">
-          Les maths sont à l'origine de tout mon parcours. La rigueur des démonstrations, la beauté des structures abstraites et la puissance du raisonnement logique m'ont naturellement conduite vers l'IA — où les mathématiques sont au cœur de chaque modèle.
+        <p data-fr="Les mathématiques ont toujours été la matière dans laquelle je me sentais le plus à l'aise. Elles m'ont appris à réfléchir avec méthode, à être patiente et à chercher des solutions de manière logique. Aujourd'hui encore, elles influencent ma manière d'aborder l'informatique, l'intelligence artificielle et les projets sur lesquels je travaille."
+           data-en="Mathematics has always been the subject I felt most comfortable with. It taught me how to think methodically, stay patient and solve problems logically. Even today, it strongly influences the way I approach computer science, artificial intelligence and the projects I work on.">
+          Les mathématiques ont toujours été la matière dans laquelle je me sentais le plus à l'aise. 
+          Elles m'ont appris à réfléchir avec méthode, à être patiente et à chercher des solutions de manière logique. 
+          Aujourd'hui encore, elles influencent ma manière d'aborder l'informatique, l'intelligence artificielle et les projets sur lesquels je travaille.
         </p>
       </div>
     </div>
@@ -357,13 +390,20 @@
     <div class="terminal reveal-child">
       <div class="term-bar">
         <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-        <span class="term-title">asmaou-bah@portfolio — zsh</span>
+        <span class="term-title">asmaou-bah@portfolio — asb</span>
       </div>
       <div class="term-body">
         <div class="term-line"><span class="prompt">~$</span><span class="cmd">whoami</span></div>
         <div class="term-out">
-          <div class="term-row"><span class="k" data-fr="nom" data-en="name">nom</span><span class="v">Asmaou BAH</span></div>
-          <div class="term-row"><span class="k" data-fr="rôle" data-en="role">rôle</span><span class="v" data-fr="Alternante en IA & Data disponible à partir de septembre 2026" data-en="AI & Data Work-Study available from September 2026">Alternante en IA & Data disponible à partir de septembre 2026</span></div>
+          <div class="term-row"><span class="k" data-fr="Nom" data-en="Name">Nom</span><span class="v">Asmaou BAH</span></div>
+          <div class="term-row">
+            <span class="k" data-fr="Recherche" data-en="Research">Recherche</span>
+            <span class="v"
+                  data-fr="Alternance en IA & Data dès septembre 2026"
+                  data-en="Looking for an AI & Data work-study program starting September 2026">
+                    Alternance en IA & Data dès septembre 2026 
+            </span>
+          </div>
         </div>
         <div class="term-line"><span class="prompt">~$</span><span class="cmd">cat mobile.txt</span></div>
         <div class="term-out">
@@ -388,6 +428,7 @@
 
   <footer>
     <span data-fr="Site développé par Asmaou BAH, avec HTML5, CSS3 et JavaScript." data-en="Site developed by Asmaou BAH, with HTML5, CSS3 and JavaScript.">Site développé par Asmaou BAH, avec HTML5, CSS3 et JavaScript.</span>
+    <br>
     <span data-fr="© 2026 Asmaou BAH — Portfolio IA & Data" data-en="© 2026 Asmaou BAH — AI & Data Portfolio">&copy; 2026 Asmaou BAH — IA & Data</span>
   </footer>
 

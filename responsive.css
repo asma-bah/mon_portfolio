@@ -1,6 +1,4 @@
-/* =============================================
-   RESPONSIVE — responsive.css
-   ============================================= */
+/*Ce fichier gere le style responsive  du site - elle adapte les styles selon la taille de l'écran*/
 
 html, body {
   max-width: 100%;
@@ -85,7 +83,7 @@ img { max-width: 100%; height: auto; }
   /* Cacher la grande photo desktop */
   .hero-photo-desktop { display: none; }
 
-  /* Ligne nom + mini photo à droite */
+  /* Ligne nom + mini photo à droite de l'ecran*/
   .hero-name-row {
     display: flex;
     align-items: flex-start;
@@ -115,7 +113,12 @@ img { max-width: 100%; height: auto; }
   }
   .hero-name .outline { letter-spacing: -1.5px; }
 
-  .hero-poste { font-size: 10px; padding: 5px 10px; margin-top: .75rem; margin-bottom: .75rem; }
+  .hero-poste { 
+    font-size: 10px; 
+    padding: 5px 10px; 
+    margin-top: .75rem; 
+    margin-bottom: .75rem; 
+  }
   .hero-desc { font-size: 13px; max-width: 100%; margin-bottom: 1.25rem; }
   .hero-btns { flex-direction: column; gap: .5rem; }
   .btn-a, .btn-b { justify-content: center; width: 100%; }
@@ -162,7 +165,7 @@ img { max-width: 100%; height: auto; }
   .proj-card.flip { direction: ltr; }
   .proj-card.flip > * { direction: ltr; }
   .proj-img {
-    border-right: none !important;
+    border-right: none !important; /*on enlève les bordures latérales pour éviter les doubles bordures quand on empile les éléments */
     border-left: none !important;
     border-bottom: 0.5px solid var(--border);
     min-height: 190px; max-height: 200px;
@@ -174,7 +177,7 @@ img { max-width: 100%; height: auto; }
   .proj-meta { flex-wrap: wrap; gap: .3rem; }
 
   /* ── Distinctions ── */
-  .dist-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .dist-grid { grid-template-columns: 1fr; gap: 1rem; } /* on les mets l'un apres l'autre*/
   .dist-card { padding: 1.25rem; }
   .dist-card h3 { font-size: 15px; }
 
