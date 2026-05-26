@@ -28,6 +28,7 @@ img { max-width: 100%; height: auto; }
 
   .sk-row { grid-template-columns: 140px 1fr; }
   .educ-item { grid-template-columns: 150px 1fr; gap: 1.5rem; }
+  .dist-grid { grid-template-columns: 1fr; gap: 1.25rem; }
 }
 
 /* ---- MOBILE (≤ 640px) ---- */
@@ -171,6 +172,11 @@ img { max-width: 100%; height: auto; }
   .proj-body { padding: 1rem; }
   .proj-body h3 { font-size: 14px; }
   .proj-meta { flex-wrap: wrap; gap: .3rem; }
+
+  /* ── Distinctions ── */
+  .dist-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .dist-card { padding: 1.25rem; }
+  .dist-card h3 { font-size: 15px; }
 
   /* ── Formation ── */
   .educ-item {
