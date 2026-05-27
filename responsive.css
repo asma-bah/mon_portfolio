@@ -27,6 +27,9 @@ img { max-width: 100%; height: auto; }
   .sk-row { grid-template-columns: 140px 1fr; }
   .educ-item { grid-template-columns: 150px 1fr; gap: 1.5rem; }
   .dist-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  /* Citation : réduction légère sur tablette */
+  .quote-section { padding: 3.5rem 2rem; }
 }
 
 /* ---- MOBILE (≤ 640px) ---- */
@@ -197,6 +200,15 @@ img { max-width: 100%; height: auto; }
   }
   .term-title { font-size: 10px; }
 
+  /* ── Citation — adapté mobile ── */
+  .quote-section { padding: 2.5rem 1rem; }
+  .quote-mark { font-size: 55px; }
+  .quote-text { font-size: 16px; }
+  .quote-invite { font-size: 13px; }
+  .quote-arrow { font-size: 36px; }
+  .quote-together { font-size: 22px; }
+  .btn-a { width: 100%; justify-content: center; }
+
   /* ── Footer ── */
   footer { padding: 1.25rem 1rem; font-size: 10px; }
 }
@@ -210,4 +222,5 @@ img { max-width: 100%; height: auto; }
   .proj-img { min-height: 160px; max-height: 170px; }
   .proj-img img { height: 170px; }
   .term-row { grid-template-columns: 65px 1fr; font-size: 9px; }
+  .quote-text { font-size: 14px; }
 }
