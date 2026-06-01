@@ -249,12 +249,41 @@
     </div>
   </section>
 
-  <!-- Section projets académiques -->
+  <!-- Section mes projets -->
   <section class="section reveal" id="pro">
-    <div class="sec-head"><span data-fr="Projets académiques" data-en="Academic Projects">Projets académiques</span></div>
+    <div class="sec-head"><span data-fr="Mes projets" data-en="My Projects">Mes projets</span></div>
+
+    <!-- Boutons de filtre -->
+    <div class="proj-filters">
+      <button class="proj-filter active" data-filter="all" data-fr="Tous" data-en="All">Tous</button>
+      <button class="proj-filter" data-filter="perso" data-fr="Perso" data-en="Personal">Perso</button>
+      <button class="proj-filter" data-filter="academique" data-fr="Académique" data-en="Academic">Académique</button>
+    </div>
+
     <div class="proj-list">
 
-      <div class="proj-card reveal-child">
+      <!-- PROJET PERSO : Prédiction de churn -->
+      <div class="proj-card reveal-child" data-cat="perso">
+        <div class="proj-img">
+            <img src="images/churn.png" alt="Customer churn">
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num" data-fr="Mai · 2026" data-en="May · 2026">Mai · 2026</span><span class="proj-badge">Python</span></div>
+          <h3 data-fr="Prédiction du départ des clients (Churn)" data-en="Customer Churn Prediction">Prédiction du départ des clients (Churn)</h3>
+          <p data-fr="À partir des données de 7043 clients d'un opérateur télécom, j'ai entraîné un modèle de machine learning pour prédire lesquels risquent de résilier leur abonnement. Le modèle a été choisi pour sa capacité à repérer les clients sur le point de partir (recall de 0,79), et non sur sa seule précision globale. Je l'ai ensuite exposé via une API (FastAPI), conteneurisé avec Docker, et déployé en ligne, testable directement."
+             data-en="Using data from 7043 customers of a telecom operator, I trained a machine learning model to predict which ones are likely to cancel their subscription. The model was chosen for its ability to spot customers about to leave (0.79 recall) rather than overall accuracy alone. I then exposed it through an API (FastAPI), containerized it with Docker, and deployed it online, testable directly.">
+             À partir des données de 7043 clients d'un opérateur télécom, j'ai entraîné un modèle de machine learning pour prédire lesquels risquent de résilier leur abonnement. 
+             Le modèle a été choisi pour sa capacité à repérer les clients sur le point de partir (recall de 0,79), et non sur sa seule précision globale. 
+            Je l'ai ensuite exposé via une API (FastAPI), conteneurisé avec Docker, et déployé en ligne, testable directement.</p>
+          <div class="proj-tags"><span>Python</span><span>Scikit-learn</span><span>FastAPI</span><span>Docker</span></div>
+          <div class="proj-links">
+            <a class="proj-gh" href="https://esme-bba-churn-prediction-api.hf.space/docs" target="_blank" data-fr="Démo en ligne" data-en="Live demo">Démo en ligne ↗</a>
+            <a class="proj-gh" href="https://github.com/asma-bah/churn_prediction" target="_blank" data-fr="Voir sur GitHub" data-en="View on GitHub">Voir sur GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-child" data-cat="academique">
         <div class="proj-img">
           <img src="images/class_images.webp" alt="Classification d'images">
         </div>
@@ -270,7 +299,7 @@
         </div>
       </div>
 
-      <div class="proj-card flip reveal-child">
+      <div class="proj-card flip reveal-child" data-cat="academique">
         <div class="proj-img">
           <img src="images/conway.gif" alt="Conway">
         </div>
@@ -288,7 +317,7 @@
         </div>
       </div>
 
-      <div class="proj-card reveal-child">
+      <div class="proj-card reveal-child" data-cat="academique">
         <div class="proj-img">
           <img src="images/morpion.jpg" alt="Morpion MCTS">
         </div>
@@ -306,7 +335,7 @@
         </div>
       </div>
 
-      <div class="proj-card flip reveal-child">
+      <div class="proj-card flip reveal-child" data-cat="academique">
         <div class="proj-img">
           <img src="images/diamant.jpeg" alt="Jeu Diamant">
         </div>
@@ -449,13 +478,19 @@
                     Alternance en IA & Data dès septembre 2026 
             </span>
           </div>
+          <div class="term-row">
+            <span class="k" data-fr="Rythme" data-en="Schedule">Rythme</span>
+            <span class="v" data-fr="1 semaine en entreprise / 1 semaine en cours" 
+              data-en="1 week at company / 1 week at school">1 semaine en entreprise / 1 semaine en cours
+            </span>
+          </div>
         </div>
         <div class="term-line"><span class="prompt">~$</span><span class="cmd">cat mobile.txt</span></div>
         <div class="term-out">
           <div class="term-row">
             <span class="k" data-fr="Mobilité" data-en="Mobility">Mobilité</span>
-            <span class="v" data-fr="Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est" data-en="Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est">
-              Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est
+            <span class="v" data-fr="Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est, Normandie, Bourgogne-Franche-Comté, Centre-Val de Loir." data-en="Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est, Normandie,Bourgogne-Franche-Comté, Centre-Val de Loir">
+              Pays-de-la-Loire, Île-de-France, Hauts-de-France, Grand-Est, Normandie, Bourgogne-Franche-Comté, Centre-Val de Loir.
             </span>
           </div>
         </div>
@@ -481,5 +516,34 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <!-- Filtrage des projets (Tous / Perso / Académique) -->
+  <script>
+    (function () {
+      const filtres = document.querySelectorAll('.proj-filter');
+      const cartes  = document.querySelectorAll('#pro .proj-card');
+
+      function appliquerFiltre(categorie) {
+        let indexVisible = 0;
+        cartes.forEach(carte => {
+          const correspond = (categorie === 'all' || carte.dataset.cat === categorie);
+          carte.style.display = correspond ? '' : 'none';
+          if (correspond) {
+            // zigzag : une carte visible sur deux a l'image à droite (.flip)
+            carte.classList.toggle('flip', indexVisible % 2 === 1);
+            indexVisible++;
+          }
+        });
+      }
+
+      filtres.forEach(bouton => {
+        bouton.addEventListener('click', () => {
+          filtres.forEach(b => b.classList.remove('active'));
+          bouton.classList.add('active');
+          appliquerFiltre(bouton.dataset.filter);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

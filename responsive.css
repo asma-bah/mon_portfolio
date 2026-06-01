@@ -200,15 +200,7 @@ img { max-width: 100%; height: auto; }
   }
   .term-title { font-size: 10px; }
 
-  /* ── Citation — adapté mobile ── */
-  .quote-section { padding: 2.5rem 1rem; }
-  .quote-mark { font-size: 55px; }
-  .quote-text { font-size: 16px; }
-  .quote-invite { font-size: 13px; }
-  .quote-arrow { font-size: 36px; }
-  .quote-together { font-size: 22px; }
-  .btn-a { width: 100%; justify-content: center; }
-
+ 
   /* ── Footer ── */
   footer { padding: 1.25rem 1rem; font-size: 10px; }
 }
