@@ -433,6 +433,28 @@ Style des compétences en mode défilement horizontal
 /*
 ***   section expérience et projets
  ****/
+
+/* Boutons de filtre des projets */
+.proj-filters {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.proj-filter {
+  font-size: 11px; padding: 7px 18px;
+  background: transparent; color: var(--muted2);
+  border: 0.5px solid var(--border2); border-radius: 20px;
+  font-family: var(--mono); cursor: pointer;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  transition: var(--trans);
+}
+.proj-filter:hover { color: var(--text); border-color: var(--muted2); }
+.proj-filter.active {
+  background: var(--abg); color: var(--amber); border-color: var(--abd);
+}
+
+/* Rangée de liens d'un projet (démo + GitHub) */
+.proj-links { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; }
+
 .proj-list { 
   display: flex; 
   flex-direction: column; 
